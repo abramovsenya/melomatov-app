@@ -1,0 +1,19 @@
+.button {
+	padding: 8px 28px;
+	background-color: #d2f348;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	color: #000;
+	font-size: 18px;
+	font-family: 'Rubik', serif;
+	font-weight: 500;
+
+	transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+	background-color: #c1e735; /* Цвет фона при наведении */
+	color: #fff; /* Цвет текста при наведении */
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
