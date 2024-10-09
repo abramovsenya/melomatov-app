@@ -4,6 +4,7 @@ import './styles/App.css';
 //
 import { Client } from 'appwrite';
 import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
 
 function App() {
 	const client = new Client();
@@ -15,6 +16,7 @@ function App() {
 	return (
 		<>
 			<Header />
+			<Hero />
 		</>
 	);
 }

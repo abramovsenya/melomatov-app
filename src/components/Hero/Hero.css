@@ -1,0 +1,30 @@
+.hero {
+	margin-top: 100px;
+}
+.hero__subtitle {
+	font-size: 31px;
+}
+.hero__name {
+	font-size: 65px;
+	max-width: 590px;
+	margin-top: 20px;
+}
+.hero__title {
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent;
+	background: linear-gradient(
+		180deg,
+		rgb(177, 179, 189) 0%,
+		rgba(177, 179, 189, 0.25) 100%
+	);
+	margin-top: 20px;
+	font-size: 90px;
+	text-align: center;
+}
+
+.hero__location {
+	font-size: 31px;
+	margin-top: 20px;
+	color: #b1b3bd;
+	text-align: end;
+}
