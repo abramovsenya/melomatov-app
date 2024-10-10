@@ -1,0 +1,42 @@
+.slider {
+	width: 100vw; /* Слайдер на всю ширину экрана */
+	overflow: hidden; /* Скрываем все, что выходит за пределы контейнера */
+	position: relative; /* Для позиционирования внутренних элементов */
+}
+
+.slider-wrapper {
+	width: calc(100% * 2); /* Увеличиваем ширину для дублированных слайдов */
+	animation: scroll 10s linear infinite; /* Увеличьте время для более плавной анимации */
+}
+
+.slider-track {
+	display: flex;
+	width: max-content; /* Чтобы все слайды были в одной строке */
+}
+
+.slider-slide {
+	flex-shrink: 0; /* Не сжимаем слайды */
+	width: 660px; /* Максимальная ширина слайда */
+	margin-right: 20px; /* Отступ между слайдами */
+}
+
+.slider-slide img {
+	width: 100%; /* Ширина изображения 100% от родительского блока */
+	height: auto; /* Авто высота для сохранения пропорций */
+	object-fit: cover; /* Масштабируем изображение, сохраняя пропорции */
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0); /* Начальное положение */
+	}
+	100% {
+		transform: translateX(-50%); /* Прокручиваем на половину ширины слайдов */
+	}
+}
+
+@media (max-width: 425px) {
+	.slider-slide {
+		width: 300px;
+	}
+}

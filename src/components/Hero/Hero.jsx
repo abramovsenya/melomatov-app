@@ -1,4 +1,6 @@
 import React from 'react';
+import Slider from '../ui/Slider/Slider';
+// import Swiper from "swiper";
 import './Hero.css';
 
 function Hero() {
@@ -10,6 +12,7 @@ function Hero() {
 				<h1 className='hero__title'>Тату мастер</h1>
 				<h3 className='hero__location'>Работаю в Москве</h3>
 			</div>
+			<Slider />
 		</section>
 	);
 }
