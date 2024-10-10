@@ -6,7 +6,7 @@
 
 :root {
 	font-family: 'Raydis', sans-serif;
-	color: rgb(255, 255, 255);
+	color: black;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -25,7 +25,7 @@ button {
 }
 
 .container {
-	max-width: 1300px;
+	max-width: 1430px;
 	padding: 0 20px;
 	margin: 0 auto;
 }
