@@ -1,0 +1,20 @@
+.portfolio {
+	margin-top: 100px;
+}
+
+.portfolio__title {
+	font-size: 65px;
+	max-width: 800px;
+	margin-bottom: 20px;
+}
+
+.portfolio__button {
+	display: flex;
+	margin: 0 auto;
+}
+
+.portfolio__cards {
+	/* flex-wrap: wrap; */
+	/* justify-content: center; */
+	/* gap: 20px; */
+}
