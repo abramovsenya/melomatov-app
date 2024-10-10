@@ -1,4 +1,5 @@
 .slider {
+	margin-top: 10px;
 	width: 100vw; /* Слайдер на всю ширину экрана */
 	overflow: hidden; /* Скрываем все, что выходит за пределы контейнера */
 	position: relative; /* Для позиционирования внутренних элементов */
@@ -6,7 +7,7 @@
 
 .slider-wrapper {
 	width: calc(100% * 2); /* Увеличиваем ширину для дублированных слайдов */
-	animation: scroll 10s linear infinite; /* Увеличьте время для более плавной анимации */
+	animation: scroll 20s linear infinite; /* Увеличьте время для более плавной анимации */
 }
 
 .slider-track {
@@ -38,5 +39,8 @@
 @media (max-width: 425px) {
 	.slider-slide {
 		width: 300px;
+	}
+	.slider {
+		margin-top: 20px;
 	}
 }

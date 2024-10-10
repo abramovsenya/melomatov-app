@@ -28,3 +28,51 @@
 	color: #b1b3bd;
 	text-align: end;
 }
+
+@media (max-width: 768px) {
+	.hero__info {
+		display: flex;
+		align-items: unset;
+	}
+	.hero__title,
+	.hero__location {
+		text-align: start;
+	}
+}
+
+@media (max-width: 672px) {
+	.hero__info {
+		display: block;
+	}
+	.hero__title {
+		font-size: 70px;
+	}
+	.hero__location {
+		font-size: 55px;
+	}
+}
+
+@media (max-width: 425px) {
+	.hero {
+		margin-top: 20px;
+	}
+	.hero__subtitle,
+	.hero__location {
+		font-size: 20px;
+	}
+	.hero__name {
+		font-size: 44px;
+	}
+	.hero__title {
+		font-size: 64px;
+	}
+}
+
+@media (max-width: 320px) {
+	.hero__title {
+		font-size: 56px;
+	}
+	.hero__name {
+		font-size: 36px;
+	}
+}
