@@ -1,13 +1,12 @@
 import React from 'react';
 import './Slider.css'; // Подключите ваши стили
 
-const slides = [
-	'/src/images/workImg.png',
-	'/src/images/fish.png',
-	'/src/images/corvus.png',
-	'/src/images/mask.png',
-	'/src/images/workImg.png',
-];
+import corvus from '/src/images/corvus.png';
+import fish from '/src/images/fish.png';
+import mask from '/src/images/mask.png';
+import workImg from '/src/images/workImg.png';
+
+const slides = [workImg, fish, corvus, mask, workImg];
 
 const Slider = () => {
 	return (
