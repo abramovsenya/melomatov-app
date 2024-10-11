@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import '../../Portfolio/Portfolio.css';
+import { Button } from '../Button';
 import './CardImage.css';
 const CardImage = () => {
 	const [images, setImages] = useState([]);
+	const [selectedImage, setSelectedImage] = useState(null);
 
 	useEffect(() => {
-		// Массив с ключами изображений
 		const imageKeys = [
 			'67081ef2001e517c6cce',
 			'67081f0b002afd85a8d1',
@@ -24,7 +25,6 @@ const CardImage = () => {
 		const bucketId = '67081d8200025a84d88f';
 		const projectId = '6706b1430026a9682fda';
 
-		// Формируем ссылки для каждого изображения
 		const imageUrls = imageKeys.map(
 			key =>
 				`https://cloud.appwrite.io/v1/storage/buckets/${bucketId}/files/${key}/view?project=${projectId}&mode=admin`
@@ -33,7 +33,6 @@ const CardImage = () => {
 		setImages(imageUrls);
 	}, []);
 
-	// Массив стилей татуировок, соответствующий каждому изображению
 	const tattooStyles = [
 		'Графика',
 		'Графика',
@@ -49,17 +48,39 @@ const CardImage = () => {
 		'Графика',
 	];
 
+	const openImage = imageUrl => {
+		setSelectedImage(imageUrl);
+	};
+
+	const closeModal = () => {
+		setSelectedImage(null);
+	};
+
 	return (
-		<div className='portfolio__cards'>
-			{images.map((imageUrl, index) => (
-				<article key={index} className='card-image'>
-					<img src={imageUrl} alt={`Tattoo Style ${index + 1}`} />
-					{/* Плашка с названием стиля татуировки */}
-					<div className='card-image__info'>
-						<p>{tattooStyles[index]}</p>
-					</div>
-				</article>
-			))}
+		<div>
+			<div className='portfolio__cards'>
+				{images.map((imageUrl, index) => (
+					<article key={index} className='card-image'>
+						<img
+							src={imageUrl}
+							alt={`Tattoo Style ${index + 1}`}
+							className='card-image__image'
+							onClick={() => openImage(imageUrl)}
+						/>
+						<div className='card-image__info'>
+							<p>{tattooStyles[index]}</p>
+						</div>
+					</article>
+				))}
+			</div>
+			<Button className='portfolio__button'>Загрузить ещё</Button>
+			{/* Модальное окно */}
+			{selectedImage && (
+				<div className='modal' onClick={closeModal}>
+					<span className='modal__close'>&times;</span>
+					<img className='modal__content' src={selectedImage} alt='Selected' />
+				</div>
+			)}
 		</div>
 	);
 };

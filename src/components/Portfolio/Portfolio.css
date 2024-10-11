@@ -11,10 +11,5 @@
 .portfolio__button {
 	display: flex;
 	margin: 0 auto;
-}
-
-.portfolio__cards {
-	/* flex-wrap: wrap; */
-	/* justify-content: center; */
-	/* gap: 20px; */
+	margin-top: 20px;
 }
