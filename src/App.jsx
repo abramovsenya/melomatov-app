@@ -3,8 +3,10 @@ import './styles/App.css';
 
 //
 import { Client } from 'appwrite';
+import About from './components/About/About';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
+import Portfolio from './components/Portfolio/Portfolio';
 
 function App() {
 	const client = new Client();
@@ -17,6 +19,8 @@ function App() {
 		<>
 			<Header />
 			<Hero />
+			<About />
+			<Portfolio />
 		</>
 	);
 }
