@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import '../../Portfolio/Portfolio.css';
 import { Button } from '../Button';
 import './CardImage.css';
+
 const CardImage = () => {
 	const [images, setImages] = useState([]);
 	const [selectedImage, setSelectedImage] = useState(null);
+	const [visibleImagesCount, setVisibleImagesCount] = useState(3); // Изначально 3 карточки
 
 	useEffect(() => {
 		const imageKeys = [
@@ -56,10 +58,14 @@ const CardImage = () => {
 		setSelectedImage(null);
 	};
 
+	const loadMoreImages = () => {
+		setVisibleImagesCount(prevCount => prevCount + 3); // Добавление 3 карточек
+	};
+
 	return (
 		<div>
 			<div className='portfolio__cards'>
-				{images.map((imageUrl, index) => (
+				{images.slice(0, visibleImagesCount).map((imageUrl, index) => (
 					<article key={index} className='card-image'>
 						<img
 							src={imageUrl}
@@ -73,7 +79,9 @@ const CardImage = () => {
 					</article>
 				))}
 			</div>
-			<Button className='portfolio__button'>Загрузить ещё</Button>
+			<Button className='portfolio__button' onClick={loadMoreImages}>
+				Загрузить ещё
+			</Button>
 			{/* Модальное окно */}
 			{selectedImage && (
 				<div className='modal' onClick={closeModal}>
