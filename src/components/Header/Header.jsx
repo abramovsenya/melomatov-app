@@ -22,8 +22,14 @@ function Header() {
 						</li>
 						<li className='nav__item'>
 							<ButtonLink
-								href=''
-								onClick={() => alert('Кнопка нажата!')}
+								href='#footer'
+								onClick={e => {
+									e.preventDefault();
+									document.getElementById('footer').scrollIntoView({
+										behavior: 'smooth',
+										block: 'start',
+									});
+								}}
 								className='nav__button'
 							>
 								Контакты
