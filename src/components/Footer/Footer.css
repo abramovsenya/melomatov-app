@@ -1,0 +1,113 @@
+.footer {
+	background-color: #000214;
+	color: white;
+	margin-top: 60px;
+}
+
+.footer__content {
+	/* padding-top: 60px; */
+}
+
+.footer__title {
+	font-size: 65px;
+	padding-top: 60px;
+}
+
+.footer__subtitle {
+	font-family: 'Rubik', serif;
+	font-size: 30px;
+	max-width: 590px;
+	margin: 40px 0;
+	font-weight: 500;
+}
+.footer__aside {
+	background-color: #151727;
+	color: #b1b3bd;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 100px;
+	font-family: 'Rubik', serif;
+	position: relative; /* Добавляем для позиционирования разделительной линии */
+	box-shadow: 0px 0px 42.6px 8px #f6f6f640;
+}
+
+.footer__address {
+	max-width: 530px;
+	font-size: 30px;
+}
+
+.footer__menu {
+	display: flex;
+	flex-direction: column; /* Чтобы ссылки располагались вертикально */
+	gap: 15px; /* Отступ между ссылками */
+}
+
+.footer__link-item {
+	align-items: center;
+	display: flex;
+	color: #b1b3bd;
+	gap: 15px;
+	font-size: 24px;
+}
+
+.footer__divider {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background-color: #b1b3bd;
+	height: 100%; /* Линия будет во весь блок */
+}
+
+.footer__copyright {
+	text-align: center;
+	padding: 30px 0;
+}
+
+@media (max-width: 1024px) {
+	.footer__address {
+		max-width: 320px;
+	}
+}
+@media (max-width: 768px) {
+	.footer__aside {
+		flex-direction: column;
+		/* flex-wrap: wrap; */
+		padding: 30px 50px;
+	}
+	.footer__divider {
+		position: static; /* Убираем абсолютное позиционирование */
+		width: 100%; /* Линия на всю ширину */
+		height: 2px; /* Низкая линия */
+		background-color: #b1b3bd;
+		margin: 20px 0; /* Отступ сверху и снизу */
+	}
+	.footer__menu {
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.footer__address {
+		text-align: center;
+		max-width: 100%; /* Растянуть текст на всю ширину */
+	}
+}
+
+@media (max-width: 425px) {
+	.footer__title {
+		font-size: 36px;
+	}
+	.footer__subtitle {
+		font-size: 18px;
+	}
+	.footer__address,
+	.footer__link-item {
+		font-size: 18px;
+	}
+	.footer__copyright {
+		font-size: 16px;
+	}
+}

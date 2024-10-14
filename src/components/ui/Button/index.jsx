@@ -1,8 +1,15 @@
 import './Button.css';
 
-export const Button = ({ children, onClick }) => {
+// export const Button = ({ children, onClick }) => {
+// 	return (
+// 		<button className='button' onClick={onClick}>
+// 			{children}
+// 		</button>
+// 	);
+// };
+export const Button = ({ children, onClick, className }) => {
 	return (
-		<button className='button' onClick={onClick}>
+		<button className={`button ${className}`} onClick={onClick}>
 			{children}
 		</button>
 	);
